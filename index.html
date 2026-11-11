@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cadastro de Clientes</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <main class="container">
+
+    <h1>Cadastro de Clientes</h1>
+
+    <p class="descricao">Gerencie os dados dos clientes da empresa.</p>
+
+ 
+
+    <form id="formCliente">
+
+      <input type="hidden" id="clienteId">
+
+ 
+
+      <div class="campo">
+
+        <label for="nome">Nome completo</label>
+
+        <input type="text" id="nome" placeholder="Digite o nome" required>
+
+      </div>
+
+ 
+
+      <div class="campo">
+
+        <label for="email">E-mail</label>
+
+        <input type="email" id="email" placeholder="exemplo@email.com" required>
+
+      </div>
+
+ 
+
+      <div class="campo">
+
+        <label for="telefone">Telefone</label>
+
+        <input type="tel" id="telefone" placeholder="(00) 00000-0000">
+
+      </div>
+
+ 
+
+      <div class="campo">
+
+        <label for="cidade">Cidade</label>
+
+        <input type="text" id="cidade" placeholder="Digite a cidade">
+
+      </div>
+
+ 
+
+      <div class="botoes">
+
+        <button type="submit" id="btnSalvar">Salvar cliente</button>
+
+        <button type="button" id="btnLimpar" class="secundario">Limpar</button>
+
+      </div>
+
+    </form>
+
+ 
+
+    <section class="lista">
+
+      <h2>Clientes cadastrados</h2>
+
+      <input type="search" id="pesquisa" placeholder="Pesquisar por nome ou e-mail">
+
+      <div class="tabela-responsiva">
+
+        <table>
+
+          <thead>
+
+            <tr>
+
+              <th>Nome</th><th>E-mail</th><th>Telefone</th>
+
+              <th>Cidade</th><th>Ações</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody id="listaClientes"></tbody>
+
+        </table>
+
+      </div>
+
+      <p id="mensagemVazia">Nenhum cliente cadastrado.</p>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
